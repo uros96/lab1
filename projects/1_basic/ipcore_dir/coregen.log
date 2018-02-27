@@ -1,0 +1,55 @@
+INFO:sim:172 - Generating IP...
+Applying current project options...
+Finished applying current project options.
+Resolving generics for 'dcm27_to_50'...
+WARNING:sim - A core named 'dcm27_to_50' already exists in the project. Output
+   products for this core may be overwritten.
+Applying external generics to 'dcm27_to_50'...
+Delivering associated files for 'dcm27_to_50'...
+WARNING:sim - Component clk_wiz_v3_6 does not have a valid model name for
+   Verilog synthesis
+Delivering EJava files for 'dcm27_to_50'...
+Delivered 3 files into directory C:/Users/Uros/Desktop/rtrk/LPRS
+2/Vezbe/lab1/projects/1_basic/ipcore_dir/tmp/_cg/dcm27_to_50
+Delivered 1 file into directory C:/Users/Uros/Desktop/rtrk/LPRS
+2/Vezbe/lab1/projects/1_basic/ipcore_dir/tmp/_cg/dcm27_to_50
+Generating ASY schematic symbol...
+Loading device for application Rf_Device from file '6slx45.nph' in environment
+C:\Xilinx\14.5\ISE_DS\ISE\.
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating SYM schematic symbol for 'dcm27_to_50'...
+Generating ISE project...
+XCO file found: dcm27_to_50.xco
+XMDF file found: dcm27_to_50_xmdf.tcl
+Adding C:/Users/Uros/Desktop/rtrk/LPRS
+2/Vezbe/lab1/projects/1_basic/ipcore_dir/tmp/_cg/dcm27_to_50/example_design/dcm2
+7_to_50_exdes.ucf -view all -origin_type created
+Adding C:/Users/Uros/Desktop/rtrk/LPRS
+2/Vezbe/lab1/projects/1_basic/ipcore_dir/tmp/_cg/dcm27_to_50/example_design/dcm2
+7_to_50_exdes.v -view all -origin_type created
+INFO:HDLCompiler:1845 - Analyzing Verilog file "C:/Users/Uros/Desktop/rtrk/LPRS
+   2/Vezbe/lab1/projects/1_basic/ipcore_dir/tmp/_cg/dcm27_to_50/example_design/d
+   cm27_to_50_exdes.v" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding C:/Users/Uros/Desktop/rtrk/LPRS
+2/Vezbe/lab1/projects/1_basic/ipcore_dir/tmp/_cg/dcm27_to_50.asy -view all
+-origin_type imported
+Adding C:/Users/Uros/Desktop/rtrk/LPRS
+2/Vezbe/lab1/projects/1_basic/ipcore_dir/tmp/_cg/dcm27_to_50.v -view all
+-origin_type created
+INFO:HDLCompiler:1845 - Analyzing Verilog file "C:/Users/Uros/Desktop/rtrk/LPRS
+   2/Vezbe/lab1/projects/1_basic/ipcore_dir/tmp/_cg/dcm27_to_50.v" into library
+   work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding C:/Users/Uros/Desktop/rtrk/LPRS
+2/Vezbe/lab1/projects/1_basic/ipcore_dir/tmp/_cg/dcm27_to_50.veo -view all
+-origin_type imported
+WARNING:coreutil - WARNING: This core does not have a top level called
+   "/dcm27_to_50"
+   WARNING: Top level has been set to "/dcm27_to_50_exdes"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'dcm27_to_50'.
