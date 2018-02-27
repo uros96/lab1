@@ -14,17 +14,18 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_ARITH.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-ENTITY clk_counter IS GENERIC(
-					-- maksimalna vrednost broja do kojeg brojac broji
-					max_cnt : STD_LOGIC_VECTOR(25 DOWNTO 0) := "10111110101111000010000000" -- 50 000 000
-				  );
-		 PORT   (
-					 clk_i     : IN  STD_LOGIC; -- ulazni takt
-					 rst_i     : IN  STD_LOGIC; -- reset signal
-					 cnt_en_i  : IN  STD_LOGIC; -- signal dozvole brojanja
-					 cnt_rst_i : IN  STD_LOGIC; -- signal resetovanja brojaca (clear signal)
-					 one_sec_o : OUT STD_LOGIC  -- izlaz koji predstavlja proteklu jednu sekundu vremena
-				  );
+ENTITY clk_counter IS 
+			GENERIC(
+				-- maksimalna vrednost broja do kojeg brojac broji
+				max_cnt : STD_LOGIC_VECTOR(25 DOWNTO 0) := "10111110101111000010000000" -- 50 000 000
+			);
+			PORT   (
+				clk_i     : IN  STD_LOGIC; -- ulazni takt
+				rst_i     : IN  STD_LOGIC; -- reset signal
+				cnt_en_i  : IN  STD_LOGIC; -- signal dozvole brojanja
+				cnt_rst_i : IN  STD_LOGIC; -- signal resetovanja brojaca (clear signal)
+				one_sec_o : OUT STD_LOGIC  -- izlaz koji predstavlja proteklu jednu sekundu vremena
+			);
 END clk_counter;
 
 ARCHITECTURE rtl OF clk_counter IS
@@ -57,18 +58,6 @@ reg_i : reg port map (
 	i_d => counter_next,
 	o_q => counter_r
 );
-
---process (cnt_rst_i, cnt_en_i, counter_next) begin
---	if (cnt_rst_i='1') then
---		counter_next<=(others=>'0');
---	elsif (cnt_en_i='1') then
---		if (counter_next=max_cnt) then
---			counter_next<=(others=>'0');
---		else 
---			counter_next<=counter_r+1;
---		end if;
---	end if;
---end process; 
 
 counter_next <= (others=>'0') when cnt_rst_i='1' else
 					(others=>'0') when (cnt_en_i='1' and counter_next=max_cnt) else
